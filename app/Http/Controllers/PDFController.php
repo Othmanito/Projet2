@@ -19,6 +19,8 @@ class PDFController extends Controller
         case 'categories':    return $this->printCategories();    break;
         case 'fournisseurs':  return $this->printFournisseurs();  break;
         case 'articles':      return $this->printArticles();      break;
+        case 'promotions':    return $this->printPromotions();    break;
+        case 'magasins':    return $this->printMagasins();    break;
         default: return 'erreur PDFController-> imprimer';
       }
     }
@@ -28,43 +30,37 @@ class PDFController extends Controller
       $date = Carbon::now()->format('j/m/Y');
       //echo $date;
       //return true;
-      $pdf = PDF::loadView('pdf-users',['data' => DB::table('users')->get() ,'magasins' => DB::table('magasins')->get(), 'roles' =>  DB::table('roles')->get() ] );
+      $pdf = PDF::loadView('pdf/pdf-users',['data' => DB::table('users')->get() ,'magasins' => DB::table('magasins')->get(), 'roles' =>  DB::table('roles')->get() ] );
       return $pdf->stream("Utilisateurs $date .pdf");
     }
 
     public function printArticles()
     {
-      $pdf = PDF::loadView('pdf-articles',['data' => DB::table('articles')->get(), 'fournisseurs' => DB::table('fournisseurs')->get(), 'categories' => DB::table('categories')->get() ] );
+      $pdf = PDF::loadView('pdf/pdf-articles',['data' => DB::table('articles')->get(), 'fournisseurs' => DB::table('fournisseurs')->get(), 'categories' => DB::table('categories')->get() ] );
       return $pdf->stream('Articles '.date('d-M-Y').'.pdf');
+    }
+
+    public function printPromotions()
+    {
+      $pdf = PDF::loadView('pdf/pdf-promotions',['data' => DB::table('promotions')->get(), 'articles' => DB::table('articles')->get(), 'magasins' => DB::table('magasins')->get() ] );
+      return $pdf->stream('Promotions '.date('d-M-Y').'.pdf');
     }
 
     public function printCategories()
     {
-      $pdf = PDF::loadView('pdf-categories',['data' => DB::table('categories')->get() ] );
+      $pdf = PDF::loadView('pdf/pdf-categories',['data' => DB::table('categories')->get() ] );
       return $pdf->stream('Categories.pdf');
     }
 
     public function printFournisseurs()
     {
-      $pdf = PDF::loadView('pdf-fournisseurs',['data' => DB::table('fournisseurs')->get() ] );
+      $pdf = PDF::loadView('pdf/pdf-fournisseurs',['data' => DB::table('fournisseurs')->get() ] );
       return $pdf->stream('Fournisseurs '.date('d-M-Y').'.pdf');
     }
 
-    public function pdf1()
+    public function printMagasins()
     {
-      //$users = User::all();
-      $page = "
-      <h1>Title 1</h1>
-      <h2>Title 2</h2>
-      <h3>Title 3</h3>\"aaa\"
-      <h4>Title 4</h4>
-      <h5>Title 5</h5>
-      <h6>Title 6</h6>";
-
-      $pdf = PDF::loadHTML($page);
-
-      dump($pdf);
-      return $pdf->stream('users.pdf');
-      //return $pdf->download('test.pdf');
+      $pdf = PDF::loadView('pdf/pdf-magasins',['data' => DB::table('magasins')->get() ] );
+      return $pdf->stream('Magasins '.date('d-M-Y').'.pdf');
     }
 }

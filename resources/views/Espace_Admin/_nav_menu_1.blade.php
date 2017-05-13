@@ -6,7 +6,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	</button>
-	<a class="navbar-brand" href="/">Golf-Maroc</a>
+	<a class="navbar-brand" href="/Projet2/public">Golf-Maroc</a>
 </div>
 
 			<!-- Top Menu Items -->

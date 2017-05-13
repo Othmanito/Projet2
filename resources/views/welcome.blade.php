@@ -97,8 +97,8 @@
         <div class="links">
             <a href="{{ Route('admin.home') }}">Administrateur</a>
             <a href="{{ Route('direct.home') }}">Directeur</a>
-            <a href="">Magasinier</a>
-          <a href="#">Vendeur</a>
+            <a href="{{ Route('magas.home') }}">Magasinier</a>
+          <a href="{{ Route('vend.home') }}">Vendeur</a>
         </div>
     </div>
 </div>

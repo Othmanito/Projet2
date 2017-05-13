@@ -247,8 +247,18 @@
 
                 <!-- row -->
                 <div class="row" align="center">
-                    <a type="button" class="btn btn-outline btn-default" disabled=""><i class="fa fa-file-pdf-o"
-                                                                                        aria-hidden="true">Imprimer </i></a>
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">Exporter<span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                          <li><a target="_blank"
+                                 href="{{ Route('export',[ 'p_table' => 'articles' ]) }}" {!! setPopOver("","Exporter la liste des categories") !!}>Excel</a>
+                          </li>
+                          <li><a target="_blank" href="{{ Route('print',[ 'param' => 'articles' ]) }}"> PDF </a></li>
+
+                      </ul>
+                  </div>
                     <a href="{{ Route('direct.add',[ 'p_table' => 'articles' ]) }}" type="button"
                        class="btn btn-outline btn-default" {!! setPopOver("","Ajouter un nouvel article") !!}> <i class="glyphicon glyphicon-plus "></i>Ajouter
                         un Article</a>

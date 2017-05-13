@@ -47,25 +47,31 @@
 </style>
 </head>
 <body>
-    <div id="page-wrap">
-        <table width="100%">
-            <tbody>
-                <tr>
-                    <td width="30%">
-                        <img src="images/golfmaroc.png" > <!-- your logo here -->
-                    </td>
-                    <td width="70%">
-                        <h1>Liste des catégories</h1><br>
-                        <strong>Fait le :</strong> {{ date('d-M-Y') }}<br>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">&nbsp;</td>
-                </tr>
+  <div id="page-wrap">
+      <table width="100%">
+          <thead>
+              <tr>
+                  <th width="30%">
+                      <img src="images/golfmaroc.png">
+                  </th>
+                  <th width="70%" colspan="3">
+                      <center>Magasin N° 3 Bloc A1 Residence Tifaouine </center>
+                        <center>Av. Moukaouama Agadir </center>
+                        <center>Tel : 0528 844 727   Fax : 0528 844 710  </center>
 
-            </tbody>
-        </table>
-        <p>&nbsp;</p>
+                  </th>
+                </tr>
+                  <tr>
+                  <th width="70%" colspan="3">
+                      <h1><center>Liste des Categories</center></h1><br>
+
+                  </th>
+              </tr>
+          </thead>
+      </table>
+
+      <p>&nbsp;</p>
+
         <table width="100%" class="outline-table">
             <tbody>
                 <tr class="border-bottom border-right grey">

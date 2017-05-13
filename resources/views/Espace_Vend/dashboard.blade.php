@@ -19,14 +19,6 @@
             <div class="row">
                 <h1 class="page-header">Bienvenue dans votre Espace Vendeur </h1>
 
-                <ol class="breadcrumb">
-                    <li><i class="fa fa-dashboard"></i> <a href="{{ Route('vend.home')  }}">Dashboard</a></li>
-                    <li class="action"><i class="fa fa-file"></i> Blank Page</li>
-                    <li class=""><i class="fa fa-file"></i> Blank Page</li>
-                    <li class="active"><i class="fa fa-folder"></i> Blank Page</li>
-                    <li class="active"><i class="fa fa-backward"></i> Blank Page</li>
-                    <li class="active"><i class="fa fa-vk"></i> Blank Page</li>
-                </ol>
 
                 {{-- **************Alerts**************  --}}
                 <div class="row">

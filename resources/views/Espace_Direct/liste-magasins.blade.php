@@ -174,6 +174,19 @@
             <div class="row" align="center">
                 <a href="{{ Route('direct.add',[ 'p_table' => 'magasins' ]) }}" type="button"
                    class="btn btn-outline btn-default"> <i class="glyphicon glyphicon-plus "></i> Ajouter un Magasin </a>
+
+                   <div class="btn-group">
+                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Exporter<span class="caret"></span>
+                       </button>
+                       <ul class="dropdown-menu">
+                           <li><a target="_blank"
+                                  href="{{ Route('export',[ 'p_table' => 'magasins' ]) }}" {!! setPopOver("","Exporter la liste des magasins en Excel") !!}>Excel</a>
+                           </li>
+                           <li><a target="_blank" href="{{ Route('print',[ 'param' => 'magasins' ]) }}" {!! setPopOver("","Exporter la liste des magasins en PDF") !!}>PDF</a>
+                           </li>
+
+                       </ul>
             </div>
         </div>
 

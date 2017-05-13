@@ -180,10 +180,8 @@
                         <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exporter<span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <li><a target="_blank" href="{{ Route('export',[ 'p_table' => 'fournisseurs' ]) }}" title="Exporter la liste des utilisateur">Excel</a></li>
-                            <li><a href="#">Not Set Yet</a></li>
-                            <li><a href="#">Not Set Yet</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Not Set Yet</a></li>
+                            <li><a target="_blank" href="{{ Route('print',[ 'param' => 'fournisseurs' ]) }}">PDF</a></li>
+
                         </ul>
                     </div>
                 </div>

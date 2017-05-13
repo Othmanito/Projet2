@@ -168,10 +168,8 @@
                             <li><a target="_blank"
                                    href="{{ Route('export',[ 'p_table' => 'categories' ]) }}" {!! setPopOver("","Exporter la liste des categories") !!}>Excel</a>
                             </li>
-                            <li><a href="#"> -- </a></li>
-                            <li><a href="#"> -- </a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#"> -- </a></li>
+                            <li><a target="_blank" href="{{ Route('print',[ 'param' => 'categories' ]) }}"> PDF </a></li>
+
                         </ul>
                     </div>
                     <a href="{{ Route('direct.add',[ 'p_table' => 'categories' ]) }}" type="button"

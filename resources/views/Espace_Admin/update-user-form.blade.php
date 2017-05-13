@@ -123,7 +123,7 @@
 								{{-- Prenom --}}
 								<div class="form-group">
 									<label>Prenom</label>
-									<input type="text" class="form-control" placeholder="Prenom" id="prenom" value="{{ $data->prenom }}">
+									<input type="text" class="form-control" placeholder="Prenom" name="prenom" value="{{ $data->prenom }}">
 								</div>
 							</div>
 

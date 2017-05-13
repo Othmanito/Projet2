@@ -1,6 +1,7 @@
 <html>
 
 <head>
+        <link rel="shortcut icon" href="{{{ asset('images/golfmaroc.png') }}}">
     <title>Liste des Utilisateurs</title>
     <style type="text/css">
         #page-wrap {
@@ -63,6 +64,8 @@
             background: grey;
         }
     </style>
+
+
 </head>
 
 <body>
@@ -73,13 +76,18 @@
                     <th width="30%">
                         <img src="images/golfmaroc.png">
                     </th>
-                    <th width="70%">
-                        <h1>Liste des Utilisateurs</h1><br>
-                        <strong>Fait le :</strong> {{ date('d-M-Y') }}<br>
+                    <th width="70%" colspan="3">
+                        <center>Magasin N° 3 Bloc A1 Residence Tifaouine </center>
+                          <center>Av. Moukaouama Agadir </center>
+                          <center>Tel : 0528 844 727   Fax : 0528 844 710  </center>
+
                     </th>
-                </tr>
-                <tr>
-                    <th colspan="2">&nbsp;</th>
+                  </tr>
+                    <tr>
+                    <th width="70%" colspan="3">
+                        <h1><center>Liste des Utilisateurs</center></h1><br>
+
+                    </th>
                 </tr>
             </thead>
         </table>
@@ -92,7 +100,7 @@
                     <td colspan="6"><center><strong>Liste des Utilisateurs</strong></td>
                 </tr>
                 <tr class="border-bottom border-right center">
-                  <td> #</td>
+                  <td><b> #</b></td>
                   <td>Role</td>
                   <td>Nom</td>
                   <td>Prenom</td>
@@ -111,8 +119,6 @@
                 @endforeach
             </tbody>
         </table>
-
-        <p>&nbsp;</p>
 
     </div>
 </body>

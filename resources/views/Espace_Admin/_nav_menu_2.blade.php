@@ -7,10 +7,7 @@
 
     <li><a href="{{ Route('admin.lister',['p_table'=>'users']) }}"><i class="fa fa-fw fa-desktop"></i> Liste User <span class="badge">{{ App\Models\User::count() }} </span> </a></li>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
   </ul>
 </div>
 <!-- /.navbar-collapse -->

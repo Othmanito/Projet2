@@ -6,8 +6,8 @@
 
     <li><a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="glyphicon glyphicon-shopping-cart"></i> Gestion des Ventes <i class="fa fa-fw fa-caret-down"></i></a>
       <ul id="demo" class="collapse">
-        <li><a href="{{ Route('vend.lister',[ 'p_table' => 'transact','p_id'=>3 ]) }}">Ventes établies <span class="badge">{{ App\Models\Transaction::where(['id_type_transaction'=> 3,'id_user'=> 3 ])->count() }} </span></a></li>
-        <li><a href="{{ Route('vend.lister',[ 'p_table' => 'promotions' , 'p_id' => null ] ) }}">Promotions Magasin <span class="badge">{{ App\Models\Promotion::where(['id_magasin'=> 2 ])->count() }} </span></a></li>
+        <li><a href="{{ Route('vend.lister',[ 'p_table' => 'transactions','p_id'=>3 ]) }}">Ventes établies <span class="badge">{{ App\Models\Transaction::where(['id_type_transaction'=> 3,'id_user'=> 3 ])->count() }} </span></a></li>
+        <li><a href="{{ Route('vend.lister',[ 'p_table' => 'promotions' , 'p_id' => 3 ] ) }}">Promotions Magasin <span class="badge">{{ App\Models\Promotion::where(['id_magasin'=> 2 ])->count() }} </span></a></li>
         <li><a href="{{ Route('vend.lister',[ 'p_table' => 'stocks','p_id'=>3] ) }}">Stock Magasin <span class="badge">{{ App\Models\Stock::where(['id_magasin'=> 2])->count() }} </span></a></li>
 
       </ul>

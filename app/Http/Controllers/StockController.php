@@ -29,7 +29,7 @@ class StockController extends Controller
     {
         $data = Stock::where('id_magasin', $p_id_magasin)->get();
         if ($data->isEmpty())
-            return redirect()->back()->withInput()->with('alert_warning', 'Le stock de ce magasin est vide ! Veuillez replir le stock.');
+            return redirect()->back()->withInput()->with('alert_warning', 'Le stock de ce magasin est vide.');
         else
             return view('Espace_Direct.liste-stocks')->with('data', $data);
     }
@@ -234,9 +234,9 @@ class StockController extends Controller
             back()->withInput()->with('alert_danger', $alert2);
 
         if ($nbre_articles > 1)
-            return redirect()->back()->with('alert_success', 'Le stock a été alimenté par :  ' . $nbre_articles . ' aticle.');
+            return redirect()->back()->with('alert_success', 'Alimentation de ' . $nbre_articles . ' aticle.');
         else
-            return redirect()->back()->with('alert_success', 'Le stock a été alimenté par :  ' . $nbre_articles . ' articles.');
+            return redirect()->back()->with('alert_success', 'Alimentation de ' . $nbre_articles . ' articles.');
 
     }
 

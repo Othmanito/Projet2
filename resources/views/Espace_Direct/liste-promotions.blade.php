@@ -244,6 +244,18 @@
         <div class="row" align="center">
             <a href="{{ Route('direct.add',[ 'p_table' => 'promotions' ]) }}" type="button" class="btn btn-outline btn-default"
                     {!!  setPopOver("","creer de nouvelles promotions") !!}><i class="glyphicon glyphicon-plus "></i> Ajouter des promotions </a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Exporter<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank"
+                                   href="{{ Route('export',[ 'p_table' => 'promotions' ]) }}" {!! setPopOver("","Exporter la liste des promotions") !!}>Excel</a>
+                            </li>
+                            <li><a target="_blank" href="{{ Route('print',[ 'param' => 'promotions' ]) }}">PDF</a></li>
+
+                        </ul>
+                    </div>
         </div>
 
 </div>

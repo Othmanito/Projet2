@@ -131,14 +131,11 @@
           <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exporter<span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a target="_blank" href="{{ Route('export',[ 'p_table' => 'users' ]) }}" title="Exporter la liste des utilisateur" >Excel</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a target="_blank" href="{{ Route('export',[ 'p_table' => 'users' ]) }}" title="Exporter la liste des utilisateurs" ><i class="fa fa-file-excel-o"></I>Excel</a></li>
+              <li><a  target="_blank" href="{{ Route('print',[ 'param' => 'users' ]) }}"><i class="fa fa-file-pdf-o fa-1x"></I>PDF</a></li>
+
             </ul>
           </div>
-          <a target="_blank" href="{{ Route('export',[ 'p_table' => 'users' ]) }}" type="button" class="btn btn-outline btn-default" title="Exporter la liste des utilisateur" > Export Excel</a>
         </div>
   </div>
 </div>

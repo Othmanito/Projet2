@@ -13,13 +13,11 @@
 
     <li><a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="glyphicon glyphicon-home "></i>  Gestion Stocks <i class="fa fa-fw fa-caret-down"></i></a>
       <ul id="demo1" class="collapse">
-<<<<<<< HEAD
+
         <li><a href="{{ Route('direct.lister',['p_table' => 'magasins' ]) }}"><i class="glyphicon glyphicon-home "></i>  Magasins    <span class="badge">{{ App\Models\Magasin::count() }}</span></a></li>
     </ul>
-=======
-        <li><a href="{{ Route('direct.lister',['p_table' => 'magasins' ]) }}">  Magasins    <span class="badge">{{ App\Models\Magasin::count() }}</span></a></li>
-      </ul>
->>>>>>> origin/master
+
+
     </li>
 
     <li><a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="glyphicon glyphicon-gift "></i>  Gestion Promotions <i class="fa fa-fw fa-caret-down"></i></a>
@@ -27,10 +25,7 @@
         <li><a href="{{ Route('direct.lister',['p_table' => 'promotions' ]) }}"><i class="glyphicon glyphicon-gift "></i>     Promotions     <span class="badge">{{ App\Models\Promotion::count() }}</span></a></li>
       </ul>
     </li>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
   </ul>
 </div>
 <!-- /.navbar-collapse -->

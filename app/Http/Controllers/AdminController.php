@@ -49,7 +49,7 @@ class AdminController extends Controller
   {
    $user = User::find($id);
    $user->delete();
-   return redirect()->route('admin.lister')->with('alert_success','l\'Utilisateur a été effacé avec succès.');
+   return redirect()->route('admin.lister')->with('alert_success','l\'Utilisateur a bien été effacé.');
   }
 
 
